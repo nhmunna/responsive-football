@@ -8,7 +8,6 @@ body{
 }
 .container{
     width: 1350px;
-    height: 677px;
     background-color: #2D25A0;
     margin-bottom: 70px;
 }
@@ -16,20 +15,15 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: center; */
-}
+    justify-content: center;
+} 
 /* Top-Banner Style */
 .top-banner{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     grid-column-gap: 102px;
-    /* width: 1143px; */
-    /* height: 438px; */
+    width: 1143px;
     padding: 153px 141px 86px 156px;
-}
-.top-banner .banner-info{
-    width: 485px;
-    height: 230px;
 }
 .banner-info h1{
     font-size: 64px;
@@ -40,29 +34,19 @@ main{
     transition: transform 1s ease-in-out 0.5s;
 }
 .button .button-style{
-    /* display: flex;
-    flex-direction: row;
-    align-items: flex-start; */
     padding: 10px 24px;
-    /* position: absolute; */
     width: 168px;
-    /* height: 44px; */
     background-color: #E02C6D;
     text-align: center;
 }
-.button a{
+.button a, .watch-live{
     text-decoration: none;
     color: #FFFFFF;
     font-weight: 500;
     font-size: 16px;
-    /* margin-right: 8px; */
 }
 .button span{
     margin-right: 10px;
-}
-.banner-image img{
-    width: 556.01px;
-    height: 438px;
 }
 .top-banner img{
     width: 100%;
@@ -72,10 +56,8 @@ main{
 /* Players Part Start */
 .players-container{
     width: 1050px;
-    /* height: 1977px; */
     margin-bottom: 165px;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -84,28 +66,15 @@ main{
     grid-template-columns: repeat(3,1fr);
     grid-row-gap: 27px;
     grid-column-gap: 30px;
-    /* justify-content: center;
-    align-items: center; */
 }
 .player{
     width: 330px;
-    /* height: 474px; */
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    /* border: 2px solid; */
     padding: 15px;
     box-shadow: 0px 0px 40px rgba(128, 128, 128, 0.15);
 }
 .player-img img{
     width: 100%;
-    /* width: 300px; */
-    /* height: 256px; */
 }
-/* .player-info{
-    width: 300px;
-    height: 154px;
-} */
 .player-info h2{
     font-size: 28px;
 }
@@ -115,23 +84,72 @@ main{
 }
 /* Players Part End */
 
+/* Recent Scores Part Start */
+.recent-scores{
+    width: 1050px;
+    margin-bottom: 165px;
+    
+}
+.section-title{
+    color: brown;
+}
+.scores{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-column-gap: 20px;
+}
+.score{
+    display: flex;
+    justify-content: space-around;
+    width : 330px;
+    box-shadow: 0px 0px 40px rgba(128, 128, 128, 0.15);
+    border-radius: 50px;
+}
+.team-name p, span{
+    color: gray;
+}
+/* Recent Scores Part End */
 
-/* Footer Style  */
+/* Top Comments Part Start */
+
+.top-comments{
+    width: 1050px;
+    margin-bottom: 165px;
+}
+.comments{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-column-gap: 20px;
+}
+.comment{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width : 330px;
+    box-shadow: 0px 0px 40px rgba(128, 128, 128, 0.15);
+    border-radius: 40px;
+    padding: 15px;
+}
+.comment h6{
+    font-size: 15px;
+}
+.comment p{
+    color: gray;
+    font-size: 12px;
+}
+/* Top Comments Part End */
+
+/* Footer Style Start */
 .footer{
     display: flex;
     flex-direction: column;
-    /* flex-wrap: wrap; */
-    /* grid-template-columns: repeat(1,1fr); */
     align-items: center;
     justify-content: center;
-    /* width: 483.87px;
-    height: 213px; */
     margin-top: 158px;
-    /* position: absolute; */
 }
 footer .logo{
     width: 483.87px;
-    height: 110px;
 }
 .logo img{
     width: 100%;
@@ -143,5 +161,71 @@ footer .logo{
 }
 .footer-note{
     font-size: 18px;
-    /* margin: 20px 0px; */
+}
+/* Footer Part End  */
+
+/* ------------------
+    Media Quries 
+---------------------*/
+
+/*-------------------
+        Mobile Devices 
+ -------------------------------*/
+
+ @media only screen and (max-width: 688px) {
+    .container, .players-container, .recent-scores, .top-comments{
+        width : 100%;
+    }
+    .top-banner, .players, .scores, .comments, .footer{
+        grid-template-columns: repeat(1,1fr);
+        grid-row-gap: 24px;
+    }
+    .top-banner {
+        width: 80%;
+        padding: 0px;
+        margin: 15px;
+    }
+    .recent-scores, .top-comments{
+        width: 80%;
+    }
+    .top-comments{
+        margin-right: 30px;
+    }
+    .footer{
+        width:80%;
+    }
+    .footer .logo{
+        width:80%;
+    }
+}
+
+/*-----------------
+        Tablet Devices
+----------------------------- */
+
+ @media only screen and (min-width: 688px) and (max-width: 992px) {
+    .container, .players-container, .recent-scores, .top-comments{
+        width : 100%;
+    }
+    .top-banner, .players, .scores, .comments, .footer{
+        grid-template-columns: repeat(2,1fr);
+        grid-row-gap: 24px;
+    }
+    .top-banner {
+        width: 100%;
+        padding: 0px;
+        margin: 15px;
+    }
+    .recent-scores, .top-comments{
+        width: 90%;
+    }
+    .top-comments{
+        margin-right: 30px;
+    }
+    .footer{
+        width:100%;
+    }
+    .footer .logo{
+        width: 90%;
+    }
 }
