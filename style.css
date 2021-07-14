@@ -23,7 +23,7 @@ main{
     grid-template-columns: repeat(2,1fr);
     grid-column-gap: 102px;
     width: 1143px;
-    padding: 153px 141px 86px 156px;
+    padding: 153px 0px 86px 120px;
 }
 .banner-info h1{
     font-size: 64px;
